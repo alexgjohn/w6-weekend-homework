@@ -66,4 +66,21 @@ describe('Decorator', function() {
         const actual = room1.painted
         assert.strictEqual(actual, false)
     })
+
+    it('should be able to remove empty paint cans from stock', function() {
+        decorator1.paintStock = paints
+        paintCan1.empty()
+        decorator1.removeEmptyCans()
+        const actual = decorator1.paintStock
+        assert.deepStrictEqual(actual, [paintCan2, paintCan3])
+    })
+
+    it('should be able to decrease amount of paint in stock when painting a room', function() {
+        decorator1.paintStock = paints
+        decorator1.paintRoom(room1)
+        const actual1 = decorator1.calculateTotalLitresOfPaint()
+        const actual2 = decorator1.paintStock
+        assert.strictEqual(actual1, 10)
+        assert.deepStrictEqual(actual2, [paintCan3])
+    })
 })
