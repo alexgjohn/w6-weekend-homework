@@ -9,12 +9,6 @@ UpperCaser.prototype.toUpperCase = function () {
     return wordsInUpper
 }
 
-// Traveller.prototype.calculateTotalDistanceTravelled = function () {
-
-//     const listOfDistances = this.journeys.map((journey) => {
-//       return journey.distance
-//     })
-  
 
 module.exports = UpperCaser;
 
