@@ -21,4 +21,10 @@ describe('IsogramFinder', function () {
     const isogramFinder = new IsogramFinder('NotAnIsogram');
     assert.strictEqual(isogramFinder.isIsogram(), false);
   });
+
+  it('should be able to detect an isogram with special characters', function () {
+    const isogramFinder = new IsogramFinder('Lethargic!')
+    assert.strictEqual(isogramFinder.isIsogram(), true)
+  })
+
 });

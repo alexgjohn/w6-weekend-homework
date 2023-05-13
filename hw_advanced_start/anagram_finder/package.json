@@ -1,7 +1,6 @@
 {
   "name": "anagram_finder",
   "version": "1.0.0",
-  "description": "",
   "main": "anagram.js",
   "scripts": {
     "test": "mocha anagram_finder_spec.js"
@@ -11,5 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "mocha": "^5.0.1"
-  }
+  },
+  "description": ""
 }
